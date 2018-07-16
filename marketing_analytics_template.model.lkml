@@ -1,7 +1,5 @@
 label: "Marketing Analytics"
 
-include: "/app_marketing_analytics_config/config.model"
-
 # include all the views
 include: "account_fact.view"
 include: "ad_impressions.view"
