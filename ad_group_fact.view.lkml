@@ -1,5 +1,3 @@
-include: "/ama_adwords_adapter/ad_group.view"
-
 include: "campaign_fact.view"
 include: "recent_changes.view"
 

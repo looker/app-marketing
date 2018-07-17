@@ -1,5 +1,3 @@
-include: "/ama_adwords_adapter/customer.view"
-
 include: "ad_metrics_weighted_period_comparison_base.view"
 include: "ad_metrics_period_comparison_base.view"
 include: "google_ad_metrics_base.view"
@@ -9,6 +7,7 @@ include: "period_base.view"
 include: "date_fact.view"
 
 explore: account_date_fact {
+  extends: [customer_join]
   persist_with: adwords_etl_datagroup
   hidden: yes
   from: account_date_fact
@@ -27,13 +26,6 @@ explore: account_date_fact {
     from: date_fact
     view_label: "Total This Period"
     sql_on: ${fact.date_period} = ${total.date_period} ;;
-    relationship: many_to_one
-  }
-  join: customer {
-    from: customer_adapter
-    view_label: "Customer"
-    sql_on: ${fact.external_customer_id} = ${customer.external_customer_id} AND
-      ${fact._date} = ${customer._date} ;;
     relationship: many_to_one
   }
 }

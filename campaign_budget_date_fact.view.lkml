@@ -1,5 +1,3 @@
-include: "/ama_adwords_adapter/campaign.view"
-
 include: "date_base.view"
 include: "period_base.view"
 

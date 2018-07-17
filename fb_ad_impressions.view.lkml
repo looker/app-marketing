@@ -1,5 +1,3 @@
-include: "/ama_fb_adapter/ad_impressions.view"
-
 include: "date_base.view"
 include: "period_base.view"
 include: "fb_ad_metrics_base.view"

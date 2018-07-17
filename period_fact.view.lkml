@@ -1,6 +1,3 @@
-include: "/ama_adwords_adapter/ad.view"
-include: "/ama_adwords_adapter/keyword.view"
-
 include: "ad_metrics_parent_comparison_base.view"
 include: "ad_metrics_period_comparison_base.view"
 include: "date_base.view"

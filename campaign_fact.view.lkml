@@ -1,5 +1,3 @@
-include: "/ama_adwords_adapter/campaign.view"
-
 include: "ad_metrics_parent_comparison_base.view"
 include: "account_fact.view"
 include: "recent_changes.view"
