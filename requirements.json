@@ -3,18 +3,25 @@
   "configProject": "app-marketing-config",
   "vendors": [
     {
-      "id": "google-adwords",
-      "name": "Google Adwords",
+      "id": "google-ads",
+      "name": "Google Ads",
       "url": "https://adwords.google.com/home"
     },
     {
-      "id": "google-bqdts",
+      "id": "google-ads-bqdts",
       "name": "Google BigQuery Data Transfer Service",
       "url": "https://cloud.google.com/bigquery",
-      "gitUrl": "https://github.com/looker/ama_adwords_bqdts_adapter.git"
+      "gitUrl": "https://github.com/looker/app-marketing-google-ads-transfer-bigquery.git"
     },
     {
-      "id": "facebook",
+      "id": "fivetran",
+      "name": "Google Ad Insights by Fivetran",
+      "url": "https://fivetran.com/directory/google_adwords",
+      "gitUrl": "https://github.com/looker/app-marketing-google-ads-fivetran-bigquery",
+      "optional": true
+    },
+    {
+      "id": "facebook-ads",
       "name": "Facebook Ads",
       "url": "https://www.facebook.com/business/products/ads",
       "optional": true
@@ -23,14 +30,14 @@
       "id": "stitchdata",
       "name": "Facebook Ads ETL by Stitch",
       "url": "https://www.stitchdata.com/integrations/facebook-ads",
-      "gitUrl": "https://github.com/looker/ama_fb_stitch_adapter.git",
+      "gitUrl": "https://github.com/looker/app-marketing-facebook-ads-stitch-bigquery",
       "optional": true
     },
     {
       "id": "fivetran",
       "name": "Facebook Ad Insights by Fivetran",
       "url": "https://fivetran.com/directory/facebook_ads_insights",
-      "gitUrl": "https://github.com/looker/ama_fb_fivetran_adapter.git",
+      "gitUrl": "https://github.com/looker/app-marketing-facebook-ads-fivetran-bigquery",
       "optional": true
     }
   ],
