@@ -1,15 +1,6 @@
 {
   "disableSetup": true,
-  "configProject": "app_marketing_analytics_config",
-  "projects": {
-    "ama_adwords_adapter": [
-      "google-bqdts"
-    ],
-    "ama_fb_adapter": [
-      "stitchdata",
-      "fivetran"
-    ]
-  },
+  "configProject": "app-marketing-config",
   "vendors": [
     {
       "id": "google-adwords",
@@ -64,17 +55,10 @@
       "name": "Setup Projects",
       "actions": [
         {
-          "id": "createProject:ama_adwords_adapter",
-          "type": "createProject",
-          "data": {
-            "project": "ama_adwords_adapter"
-          }
-        },
-        {
           "id": "createProject",
           "type": "createProject",
           "data": {
-            "project": "app_marketing_analytics_config"
+            "project": "app-marketing-config"
           }
         }
       ]
