@@ -1,7 +1,7 @@
 {
   "requirementsFile": "requirements.json",
   "description": "Manage your digital advertising spend with Looker",
-  "descriptionExtended": "Narwhal activated charcoal butcher tote bag hella tbh chillwave offal, neutra kombucha wolf. Subway tile cornhole raw denim master cleanse wayfarers, try-hard shaman hammock gentrify beard tacos cray freegan. Portland hell of enamel pin leggings air plant poutine, unicorn subway tile green juice butcher. Poutine dreamcatcher venmo gastropub brunch disrupt bitters chartreuse. Vape plaid banh mi yr tilde synth pork belly raclette disrupt.",
+  "descriptionExtended": "",
   "exploreConfig": {
     "data": true,
     "filters": true,
@@ -9,13 +9,13 @@
     "visualization": true
   },
   "home": {
-    "name": "Google Ads Overview",
+    "name": "Digital Marketing Overview",
     "type": "dashboardCollection",
     "permalink": "overview",
     "dashboardCollection": {
       "dashboards": [
         {
-          "lookmlID": "marketing_analytics::adwords_overview",
+          "lookmlID": "marketing_analytics::cross_channel_overview",
           "name": "Default",
           "permalink": ""
         }
@@ -310,7 +310,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
               "view": "ad_date_fact"
             },
             {
@@ -327,7 +327,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[keyword.status_active]=Yes&f[campaign.status_active]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[keyword.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
               "view": "keyword_date_fact"
             },
             {
@@ -344,7 +344,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[campaign.status_active]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
               "view": "ad_group_date_fact"
             }
           ],
@@ -962,7 +962,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
               "view": "fb_ad_date_fact"
             },
             {
@@ -979,7 +979,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[campaign.status_active]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
               "view": "fb_adset_date_fact"
             }
           ],
