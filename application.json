@@ -57,7 +57,7 @@
       "name": "Campaigns",
       "model": "marketing_analytics",
       "view": "period_fact",
-      "params": "fields=fact.date_period&f[fact.period]=month&sorts=fact.date_period+desc",
+      "params": "fields=fact.date_period&f[fact.period]=month&f[fact.date_period_comparison_period]=Yes&f[fact.date_period_before_latest]=Yes&sorts=fact.date_period+desc",
       "keyColumn": "campaign.name",
       "columns": [
         {
@@ -100,7 +100,7 @@
       "name": "Campaigns",
       "model": "marketing_analytics",
       "view": "fb_period_fact",
-      "params": "fields=fact.date_period&f[fact.period]=month&sorts=fact.date_period+desc",
+      "params": "fields=fact.date_period&f[fact.period]=month&f[fact.date_period_comparison_period]=Yes&f[fact.date_period_before_latest]=Yes&sorts=fact.date_period+desc",
       "keyColumn": "campaign.name",
       "columns": [
         {
@@ -200,7 +200,7 @@
             {
               "model": "marketing_analytics",
               "view": "ad_group_date_fact",
-              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes",
+              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "fields": {
                 "spend": {
                   "inverseChange": true,
@@ -310,7 +310,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "view": "ad_date_fact"
             },
             {
@@ -327,7 +327,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[keyword.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[keyword.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "view": "keyword_date_fact"
             },
             {
@@ -344,7 +344,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[ad_group.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "view": "ad_group_date_fact"
             }
           ],
@@ -854,7 +854,7 @@
             {
               "model": "marketing_analytics",
               "view": "fb_adset_date_fact",
-              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes",
+              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "fields": {
                 "spend": {
                   "inverseChange": true,
@@ -962,7 +962,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "view": "fb_ad_date_fact"
             },
             {
@@ -979,7 +979,7 @@
                 }
               },
               "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
               "view": "fb_adset_date_fact"
             }
           ],
