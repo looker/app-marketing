@@ -192,12 +192,6 @@
                 "name": "Click Through Rate",
                 "permalink": "click_through_rate",
                 "singleValueReference": "click_through_rate"
-              },
-              {
-                "lookmlID": "marketing_analytics::campaign_metrics_clicks",
-                "name": "Clicks",
-                "permalink": "clicks",
-                "singleValueReference": "clicks"
               }
             ],
             "defaultDashboard": "cost_per_conversion"
@@ -234,7 +228,10 @@
                 },
                 "clicks": {
                   "field": "fact.total_clicks"
-                }
+                },
+                "impressions": {
+                  "field": "fact.total_impressions"
+                },
               }
             }
           ],
