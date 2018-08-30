@@ -231,7 +231,7 @@
                 },
                 "impressions": {
                   "field": "fact.total_impressions"
-                },
+                }
               }
             }
           ],
