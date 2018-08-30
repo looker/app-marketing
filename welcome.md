@@ -18,4 +18,4 @@
 
 ## Gain insight into your company's digital marketing by exploring **Google AdWords** and **Facebook Ads** data.
 
-Questions, comments or suggestions? We'd love to hear from you at [apps@looker.com](mailto:apps@looker.com)
+Questions, comments or suggestions? We'd love to hear from you at [applications@looker.com](mailto:applications@looker.com)
