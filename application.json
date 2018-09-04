@@ -225,6 +225,12 @@
                 },
                 "return_on_ad_spend": {
                   "field": "fact.average_value_per_cost"
+                },
+                "clicks": {
+                  "field": "fact.total_clicks"
+                },
+                "impressions": {
+                  "field": "fact.total_impressions"
                 }
               }
             }
