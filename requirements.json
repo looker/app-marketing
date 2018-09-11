@@ -90,7 +90,7 @@
       ]
     },
     {
-      "name": "Google AdWords Settings",
+      "name": "Google Ads Settings",
       "actions": [
         {
           "id": "writeConfigView:adwords",
