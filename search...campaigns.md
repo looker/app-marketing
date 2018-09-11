@@ -10,7 +10,7 @@ Click on a KPI value to get an entire dashboard on that metric. Use the Time Fra
 
 <dl>
   <dt>Conversion</dt>
-  <dd>We pull the conversion events you’ve setup in AdWords, usually with a tracking code on your website. This is typically triggered by a user filling out a lead form or making a purchase.</dd>
+  <dd>We pull the conversion events you’ve setup in Google Ads, usually with a tracking code on your website. This is typically triggered by a user filling out a lead form or making a purchase.</dd>
   <dt>Click</dt>
   <dd>Any time a search user clicks on one of your search ads.</dd>
   <dt>Impression</dt>
