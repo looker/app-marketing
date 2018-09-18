@@ -1297,6 +1297,98 @@
               "tableID": "li_campaign"
             }
           ]
+        },
+      {
+          "dashboardCollection": {
+            "dashboards": [
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_spend",
+                "name": "Spend",
+                "permalink": "spend",
+                "singleValueReference": "spend"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_conversions",
+                "name": "Conversions",
+                "permalink": "conversions",
+                "singleValueReference": "conversions"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_cost_per_conversion",
+                "name": "Cost Per Conversion",
+                "permalink": "cost_per_conversion",
+                "singleValueReference": "cost_per_conversion"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_conversion_rate",
+                "name": "Conversion Rate",
+                "permalink": "conversion_rate",
+                "singleValueReference": "conversion_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_cost_per_click",
+                "name": "Cost Per Click",
+                "permalink": "cost_per_click",
+                "singleValueReference": "cost_per_click"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_click_through_rate",
+                "name": "Click Through Rate",
+                "permalink": "click_through_rate",
+                "singleValueReference": "click_through_rate"
+              }
+            ],
+            "defaultDashboard": "cost_per_conversion"
+          },
+          "singleValuesSources": [
+            {
+              "model": "marketing_analytics",
+              "view": "li_campaign_stats",
+              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
+              "fields": {
+                "spend": {
+                  "inverseChange": true,
+                  "field": "fact.total_cost"
+                },
+                "conversions": {
+                  "field": "fact.total_conversions"
+                },
+                "cost_per_conversion": {
+                  "inverseChange": true,
+                  "field": "fact.average_cost_per_conversion"
+                },
+                "conversion_rate": {
+                  "field": "fact.average_conversion_rate"
+                },
+                "cost_per_click": {
+                  "inverseChange": true,
+                  "field": "fact.average_cost_per_click"
+                },
+                "click_through_rate": {
+                  "field": "fact.average_click_rate"
+                }
+              }
+            }
+          ],
+          "filters": [
+            {
+              "defaultValue": "28 day",
+              "field": "fact.period",
+              "name": "Time Frame",
+              "type": "TimeFrame",
+              "dashboardAlias": "Period"
+            },
+            {
+              "field": "fact.campaign_name",
+              "dashboardAlias": "Campaign",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "campaign"
+            }
+          ],
+          "name": "Campaigns",
+          "permalink": "campaigns",
+          "type": "dashboardCollection"
         }
         ],
       "permalink": "linkedin"
