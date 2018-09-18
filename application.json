@@ -191,6 +191,49 @@
       "enabledByDefault": true,
       "pages": [
         {
+          "name": "Overview",
+          "permalink": "overview",
+          "type": "dashboardCollection",
+          "dashboardCollection": {
+            "dashboards": [
+              {
+                "lookmlID": "marketing_analytics::adwords_overview",
+                "name": "Default",
+                "permalink": ""
+              }
+            ]
+          },
+          "filters": [
+            {
+              "defaultValue": "28 day",
+              "field": "fact.period",
+              "name": "Time Frame",
+              "type": "TimeFrame",
+              "dashboardAlias": "Period"
+            },
+            {
+              "field": "campaign.name",
+              "dashboardAlias": "Campaign",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "campaign"
+            },
+            {
+              "autoSuggest": {
+                "model": "marketing_analytics",
+                "view": "ad_impressions_ad_group"
+              },
+              "facetedBy": [
+                "campaign.name"
+              ],
+              "field": "ad_group.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
+              "type": "Select"
+            }
+          ]
+        },
+        {
           "dashboardCollection": {
             "dashboards": [
               {
