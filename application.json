@@ -1427,6 +1427,16 @@
               "name": "Campaign",
               "type": "Table",
               "tableID": "campaign"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "li_period_fact"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
             }
           ],
           "name": "Campaigns",
