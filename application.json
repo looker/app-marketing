@@ -180,6 +180,49 @@
           "field": "fact.average_click_rate"
         }
       ]
+    },
+    {
+      "id": "bi_campaign",
+      "name": "Campaigns",
+      "model": "marketing_analytics",
+      "view": "bing_ad_group_date_fact",
+      "params": "fields=fact.date_period&f[fact.period]=month&f[fact.date_period_comparison_period]=Yes&f[fact.date_period_before_latest]=Yes&sorts=fact.date_period+desc",
+      "keyColumn": "fact.campaign_name",
+      "columns": [
+        {
+          "name": "Campaign",
+          "field": "fact.campaign_name"
+        },
+        {
+          "name": "Spend",
+          "field": "fact.total_cost"
+        },
+        {
+          "name": "Conv.",
+          "label": "# of Conversions",
+          "field": "fact.total_conversions"
+        },
+        {
+          "name": "CPA",
+          "label": "Cost Per Acquistion (Conversion)",
+          "field": "fact.average_cost_per_conversion"
+        },
+        {
+          "name": "Conv. Rate (CR)",
+          "label": "Conversion Rate",
+          "field": "fact.average_conversion_rate"
+        },
+        {
+          "name": "CPC",
+          "label": "Cost Per Click",
+          "field": "fact.average_cost_per_click"
+        },
+        {
+          "name": "CTR",
+          "label": "Click though Rate",
+          "field": "fact.average_click_rate"
+        }
+      ]
     }
   ],
   "name": "Digital Marketing",
@@ -1338,6 +1381,16 @@
               "name": "Campaign",
               "type": "Table",
               "tableID": "li_campaign"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "li_period_fact"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
             }
           ]
         },
@@ -1445,6 +1498,180 @@
         }
         ],
       "permalink": "linkedin"
+    },
+    {
+      "description": "",
+      "icon": "marketing-analytics/social",
+      "name": "Bing Ads",
+      "pages": [
+        {
+          "name": "Overview",
+          "permalink": "overview",
+          "type": "dashboardCollection",
+          "dashboardCollection": {
+            "dashboards": [
+              {
+                "lookmlID": "marketing_analytics::bing_overview",
+                "name": "Default",
+                "permalink": ""
+              }
+            ]
+          },
+          "filters": [
+            {
+              "defaultValue": "28 day",
+              "field": "fact.period",
+              "name": "Time Frame",
+              "type": "TimeFrame",
+              "dashboardAlias": "Period"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "bi_campaign"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "bing_ad_group_date_fact"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "bing_ad_group_date_fact"
+              },
+                "facetedBy": [
+                "fact.campaign_name"
+                ],
+              "field": "fact.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
+              "type": "Select"
+            }
+          ]
+        },
+        {
+          "dashboardCollection": {
+            "dashboards": [
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_spend",
+                "name": "Spend",
+                "permalink": "spend",
+                "singleValueReference": "spend"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_conversions",
+                "name": "Conversions",
+                "permalink": "conversions",
+                "singleValueReference": "conversions"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_cost_per_conversion",
+                "name": "Cost Per Conversion",
+                "permalink": "cost_per_conversion",
+                "singleValueReference": "cost_per_conversion"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_conversion_rate",
+                "name": "Conversion Rate",
+                "permalink": "conversion_rate",
+                "singleValueReference": "conversion_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_cost_per_click",
+                "name": "Cost Per Click",
+                "permalink": "cost_per_click",
+                "singleValueReference": "cost_per_click"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_click_through_rate",
+                "name": "Click Through Rate",
+                "permalink": "click_through_rate",
+                "singleValueReference": "click_through_rate"
+              }
+            ],
+            "defaultDashboard": "cost_per_conversion"
+          },
+          "singleValuesSources": [
+            {
+              "model": "marketing_analytics",
+              "view": "bing_ad_group_date_fact",
+              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
+              "fields": {
+                "spend": {
+                  "inverseChange": true,
+                  "field": "fact.total_cost"
+                },
+                "conversions": {
+                  "field": "fact.total_conversions"
+                },
+                "cost_per_conversion": {
+                  "inverseChange": true,
+                  "field": "fact.average_cost_per_conversion"
+                },
+                "conversion_rate": {
+                  "field": "fact.average_conversion_rate"
+                },
+                "cost_per_click": {
+                  "inverseChange": true,
+                  "field": "fact.average_cost_per_click"
+                },
+                "click_through_rate": {
+                  "field": "fact.average_click_rate"
+                }
+              }
+            }
+          ],
+          "filters": [
+            {
+              "defaultValue": "28 day",
+              "field": "fact.period",
+              "name": "Time Frame",
+              "type": "TimeFrame",
+              "dashboardAlias": "Period"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "bi_campaign"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "bi_period_fact"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "bing_ad_group_date_fact"
+              },
+                "facetedBy": [
+                "fact.campaign_name"
+                ],
+              "field": "fact.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
+              "type": "Select"
+            }
+          ],
+          "name": "Campaigns",
+          "permalink": "campaigns",
+          "type": "dashboardCollection"
+        }
+        ],
+      "permalink": "bing"
     }
   ]
 }
