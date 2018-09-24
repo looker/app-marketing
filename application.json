@@ -1381,6 +1381,16 @@
               "name": "Campaign",
               "type": "Table",
               "tableID": "li_campaign"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "li_period_fact"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
             }
           ]
         },
@@ -1530,7 +1540,20 @@
               "dashboardAlias": "Account",
               "name": "Account",
               "type": "Select"
-            }
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "bing_ad_group_date_fact"
+              },
+                "facetedBy": [
+                "fact.campaign_name"
+                ],
+            "field": "fact.ad_group_name",
+            "dashboardAlias": "Ad Group",
+            "name": "Ad Group",
+            "type": "Select"
+          }
           ]
         },
         {
@@ -1627,6 +1650,19 @@
               "field": "fact.account_name",
               "dashboardAlias": "Account",
               "name": "Account",
+              "type": "Select"
+            },
+            {
+              "autoSuggest": {
+              "model": "marketing_analytics",
+              "view": "bing_ad_group_date_fact"
+              },
+                "facetedBy": [
+                "fact.campaign_name"
+                ],
+              "field": "fact.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
               "type": "Select"
             }
           ],
