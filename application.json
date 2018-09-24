@@ -38,17 +38,17 @@
       },
       {
         "autoSuggest": {
-        "model": "marketing_analytics",
-        "view": "ad_impressions_ad_group"
+          "model": "marketing_analytics",
+          "view": "ad_impressions_ad_group"
         },
-          "facetedBy": [
+        "facetedBy": [
           "campaign.name"
-          ],
-      "field": "ad_group.ad_group_name",
-      "dashboardAlias": "Ad Group",
-      "name": "Ad Group",
-      "type": "Select"
-    }
+        ],
+        "field": "ad_group.ad_group_name",
+        "dashboardAlias": "Ad Group",
+        "name": "Ad Group",
+        "type": "Select"
+      }
     ]
   },
   "tables": [
@@ -1384,8 +1384,8 @@
             },
             {
               "autoSuggest": {
-              "model": "marketing_analytics",
-              "view": "li_period_fact"
+                "model": "marketing_analytics",
+                "view": "li_period_fact"
               },
               "field": "fact.account_name",
               "dashboardAlias": "Account",
@@ -1394,7 +1394,7 @@
             }
           ]
         },
-      {
+        {
           "dashboardCollection": {
             "dashboards": [
               {
@@ -1483,8 +1483,8 @@
             },
             {
               "autoSuggest": {
-              "model": "marketing_analytics",
-              "view": "li_period_fact"
+                "model": "marketing_analytics",
+                "view": "li_period_fact"
               },
               "field": "fact.account_name",
               "dashboardAlias": "Account",
@@ -1496,13 +1496,15 @@
           "permalink": "campaigns",
           "type": "dashboardCollection"
         }
-        ],
+      ],
       "permalink": "linkedin"
     },
     {
+      "permalink": "bing",
       "description": "",
       "icon": "marketing-analytics/social",
       "name": "Bing Ads",
+      "": "",
       "pages": [
         {
           "name": "Overview",
@@ -1533,8 +1535,8 @@
             },
             {
               "autoSuggest": {
-              "model": "marketing_analytics",
-              "view": "bing_ad_group_date_fact"
+                "model": "marketing_analytics",
+                "view": "bing_ad_group_date_fact"
               },
               "field": "fact.account_name",
               "dashboardAlias": "Account",
@@ -1543,12 +1545,12 @@
             },
             {
               "autoSuggest": {
-              "model": "marketing_analytics",
-              "view": "bing_ad_group_date_fact"
+                "model": "marketing_analytics",
+                "view": "bing_ad_group_date_fact"
               },
-                "facetedBy": [
+              "facetedBy": [
                 "fact.campaign_name"
-                ],
+              ],
               "field": "fact.ad_group_name",
               "dashboardAlias": "Ad Group",
               "name": "Ad Group",
@@ -1598,7 +1600,7 @@
             ],
             "defaultDashboard": "cost_per_conversion"
           },
-          "singleValuesSources": [
+            "singleValuesSources": [
             {
               "model": "marketing_analytics",
               "view": "bing_ad_group_date_fact",
@@ -1644,8 +1646,8 @@
             },
             {
               "autoSuggest": {
-              "model": "marketing_analytics",
-              "view": "bi_period_fact"
+                "model": "marketing_analytics",
+                "view": "bi_period_fact"
               },
               "field": "fact.account_name",
               "dashboardAlias": "Account",
@@ -1654,12 +1656,12 @@
             },
             {
               "autoSuggest": {
-              "model": "marketing_analytics",
-              "view": "bing_ad_group_date_fact"
+                "model": "marketing_analytics",
+                "view": "bing_ad_group_date_fact"
               },
-                "facetedBy": [
+              "facetedBy": [
                 "fact.campaign_name"
-                ],
+              ],
               "field": "fact.ad_group_name",
               "dashboardAlias": "Ad Group",
               "name": "Ad Group",
@@ -1669,54 +1671,10 @@
           "name": "Campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
-        }
-        ],
-        "singleValuesSources": [
-            {
-              "fields": {
-                "bing_opportunities_ads": {
-                  "field": "fact.cost_per_conversion_count_good"
-                },
-                "bing_underperforming_ads": {
-                  "field": "fact.cost_per_conversion_count_bad",
-                  "inverseChange": true
-                },
-                "bing_big_movers_ads": {
-                  "field": "fact.cost_per_conversion_count_big_mover"
-                }
-              },
-              "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
-              "view": "bing_ad_date_fact"
-            },
-            {
-              "fields": {
-                "bing_opportunities_keywords": {
-                  "field": "fact.cost_per_conversion_count_good"
-                }
-              },
-              "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
-              "view": "bing_keyword_date_fact"
-            },
-            {
-              "fields": {
-                "bing_opportunities_ad_groups": {
-                  "field": "fact.cost_per_conversion_count_good"
-                },
-                "bing_underperforming_ad_groups": {
-                  "field": "fact.cost_per_conversion_count_bad",
-                  "inverseChange": true
-                },
-                "bing_big_movers_ad_groups": {
-                  "field": "fact.cost_per_conversion_count_big_mover"
-                }
-              },
-              "model": "marketing_analytics",
-              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
-              "view": "bing_ad_date_fact"
-            }
-          ],
+        },
+        {
+          "name": "Optimizations",
+          "permalink": "optimizations",
           "pageSections": [
             {
               "description": "Increase your bids to take advantage for these well performing Ads and Ad Groups. They are ranking below the first position and have room to drive more conversions to you at a good price.",
@@ -1925,7 +1883,7 @@
                     "fact.ad_group_name"
                   ],
                   "name": "Underperforming Ad Groups",
-                  "permalink": "underperforming_ad_groups",
+                  "permalink": "bing_underperforming_ad_groups",
                   "singleValueReference": "bing_underperforming_ad_groups",
                   "variations": [
                     {
@@ -1981,7 +1939,94 @@
               ]
             }
           ],
-      "permalink": "bing"
+          "filters": [
+            {
+              "defaultValue": "28 day",
+              "field": "fact.period",
+              "name": "Time Frame",
+              "type": "TimeFrame",
+              "dashboardAlias": "Period"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "bi_campaign"
+            },
+            {
+              "autoSuggest": {
+                "model": "marketing_analytics",
+                "view": "bing_ad_group_date_fact"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
+            },
+            {
+              "autoSuggest": {
+                "model": "marketing_analytics",
+                "view": "bing_ad_group_date_fact"
+              },
+              "facetedBy": [
+                "fact.campaign_name"
+              ],
+              "field": "fact.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
+              "type": "Select"
+            }
+          ],
+          "singleValuesSources": [
+            {
+              "fields": {
+                "bing_opportunities_ads": {
+                  "field": "fact.cost_per_conversion_count_good"
+                },
+                "bing_underperforming_ads": {
+                  "field": "fact.cost_per_conversion_count_bad",
+                  "inverseChange": true
+                },
+                "bing_big_movers_ads": {
+                  "field": "fact.cost_per_conversion_count_big_mover"
+                }
+              },
+              "model": "marketing_analytics",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[adset.status_active]=Yes&f[ad.status_active]=Yes&f[campaign.status_active]=Yes&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
+              "view": "bing_ad_date_fact"
+            },
+            {
+              "fields": {
+                "bing_opportunities_keywords": {
+                  "field": "fact.cost_per_conversion_count_good"
+                }
+              },
+              "model": "marketing_analytics",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
+              "view": "bing_keyword_date_fact"
+            },
+            {
+              "fields": {
+                "bing_opportunities_ad_groups": {
+                  "field": "fact.cost_per_conversion_count_good"
+                },
+                "bing_underperforming_ad_groups": {
+                  "field": "fact.cost_per_conversion_count_bad",
+                  "inverseChange": true
+                },
+                "bing_big_movers_ad_groups": {
+                  "field": "fact.cost_per_conversion_count_big_mover"
+                }
+              },
+              "model": "marketing_analytics",
+              "params": "sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
+              "view": "bing_ad_date_fact"
+            }
+          ],
+          "type": "reports"
+        }
+
+      ]
     }
   ]
 }
