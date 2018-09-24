@@ -2076,6 +2076,13 @@
               "fields": {
                 "bing_opportunities_keywords": {
                   "field": "fact.cost_per_conversion_count_good"
+                },
+                "bing_underperforming_keywords": {
+                  "field": "fact.cost_per_conversion_count_bad",
+                  "inverseChange": true
+                },
+                "bing_big_movers_keywords": {
+                  "field": "fact.cost_per_conversion_count_big_mover"
                 }
               },
               "model": "marketing_analytics",
