@@ -1549,11 +1549,11 @@
                 "facetedBy": [
                 "fact.campaign_name"
                 ],
-            "field": "fact.ad_group_name",
-            "dashboardAlias": "Ad Group",
-            "name": "Ad Group",
-            "type": "Select"
-          }
+              "field": "fact.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
+              "type": "Select"
+            }
           ]
         },
         {
