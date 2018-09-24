@@ -1689,7 +1689,8 @@
                   "excludeFilters": [
                     "fact.period",
                     "fact.campaign_name",
-                    "fact.ad_group_name"
+                    "fact.ad_group_name",
+                    "fact.ad_title"
                   ],
                   "variations": [
                     {
@@ -1790,7 +1791,8 @@
                   "excludeFilters": [
                     "fact.period",
                     "fact.campaign_name",
-                    "fact.ad_group_name"
+                    "fact.ad_group_name",
+                    "fact.ad_title"
                   ],
                   "variations": [
                     {
@@ -1937,9 +1939,6 @@
                 },
                 {
                   "description": "Quickly find the ad groups that need to be paused or have their bid lowered.",
-                  "excludeFilters": [
-                    "fact.ad_group_name"
-                  ],
                   "name": "Underperforming Ad Groups",
                   "permalink": "bing_underperforming_ad_groups",
                   "singleValueReference": "bing_underperforming_ad_groups",
@@ -1970,8 +1969,8 @@
               "description": "Pause or lower the bid of these Ads and Keywords. They are performing much lower than your other ads and ad groups.",
               "excludeFilters": [
                 "fact.period",
-                "campaign.name",
-                "adset.name"
+                "fact.campaign_name",
+                "fact.ad_group_name"
               ],
               "name": "Alerts",
               "permalink": "bing_alerts",
@@ -1981,7 +1980,8 @@
                   "excludeFilters": [
                     "fact.period",
                     "fact.campaign_name",
-                    "fact.ad_group_name"
+                    "fact.ad_group_name",
+                    "fact.ad_title"
                   ],
                   "name": "Ad Alerts",
                   "permalink": "bing_alerts_ads",
