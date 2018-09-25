@@ -1686,12 +1686,7 @@
                   "name": "Ad Opportunities",
                   "permalink": "bing_opportunities_ads",
                   "singleValueReference": "bing_opportunities_ads",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.campaign_name",
-                    "fact.ad_group_name",
-                    "fact.ad_title"
-                  ],
+                  "excludeFilters": [],
                   "variations": [
                     {
                       "description": "",
@@ -1718,12 +1713,7 @@
                   "name": "Keyword Opportunities",
                   "permalink": "bing_opportunities_keywords",
                   "singleValueReference": "bing_opportunities_keywords",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.campaign_name",
-                    "fact.keyword",
-                    "fact.ad_group_name"
-                  ],
+                  "excludeFilters": [],
                   "variations": [
                     {
                       "description": "",
@@ -1750,11 +1740,7 @@
                   "name": "Ad Group Opportunities",
                   "permalink": "bing_opportunities_asets",
                   "singleValueReference": "bing_opportunities_ad_groups",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.campaign_name",
-                    "fact.ad_group_name"
-                  ],
+                  "excludeFilters": [],
                   "variations": [
                     {
                       "description": "",
@@ -1788,12 +1774,7 @@
                   "name": "Ad Performance Changes",
                   "permalink": "bing_big_movers_ads",
                   "singleValueReference": "bing_big_movers_ads",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.campaign_name",
-                    "fact.ad_group_name",
-                    "fact.ad_title"
-                  ],
+                  "excludeFilters": [],
                   "variations": [
                     {
                       "description": "",
@@ -1820,12 +1801,7 @@
                   "name": "Keyword Performance Changes",
                   "permalink": "bing_big_movers_keywords",
                   "singleValueReference": "bing_big_movers_keywords",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.campaign_name",
-                    "fact.ad_group_name",
-                    "fact.keyword"
-                  ],
+                  "excludeFilters": [],
                   "variations": [
                     {
                       "description": "",
@@ -1852,11 +1828,7 @@
                   "name": "Ad Group Performance Changes",
                   "permalink": "bing_big_movers_ad_groups",
                   "singleValueReference": "bing_big_movers_ad_groups",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.ad_group_name",
-                    "fact.campaign_name"
-                  ],
+                  "excludeFilters": [],
                   "variations": [
                     {
                       "description": "",
@@ -1967,22 +1939,13 @@
             },
             {
               "description": "Pause or lower the bid of these Ads and Keywords. They are performing much lower than your other ads and ad groups.",
-              "excludeFilters": [
-                "fact.period",
-                "fact.campaign_name",
-                "fact.ad_group_name"
-              ],
+              "excludeFilters": [],
               "name": "Alerts",
               "permalink": "bing_alerts",
               "reports": [
                 {
                   "description": "Pause or lower the bid of these ads. They are performing much lower than your other ads.",
-                  "excludeFilters": [
-                    "fact.period",
-                    "fact.campaign_name",
-                    "fact.ad_group_name",
-                    "fact.ad_title"
-                  ],
+                  "excludeFilters": [],
                   "name": "Ad Alerts",
                   "permalink": "bing_alerts_ads",
                   "variations": [
