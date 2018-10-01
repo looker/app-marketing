@@ -16,6 +16,6 @@
   </g>
 </svg>
 
-## Gain insight into your company's digital marketing by exploring **Google Ads** and **Facebook Ads** data.
+## Gain insight into your company's digital marketing by exploring **Google Ads**, **Facebook Ads**  and **LinkedIn Ads** data.
 
 Questions, comments or suggestions? We'd love to hear from you at [applications@looker.com](mailto:applications@looker.com)
