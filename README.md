@@ -1,6 +1,6 @@
 # Marketing Analytics by Looker
 
-LookML files for setting up the digital marketing application. This is the core project that combines the analysis of multiple data sources and packages it into an aplication. This project includes the model file, text files and application.json file that structures the application.
+LookML files for setting up the digital marketing application. This is the core project that combines the analysis of multiple data sources and packages it into an application. This project includes the model file, text files and application.json file that structures the application.
 
 ### Using as an Application
 
