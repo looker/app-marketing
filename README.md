@@ -32,7 +32,7 @@ LinkedIn Ads Adapter:
 - app-marketing-linkedin-ads-fivetran-bigquery
 
 Bing Ads Adapter:
--app-marketing-bing-ads-fivetran-bigquery
+- app-marketing-bing-ads-fivetran-bigquery
 
 In Progress:
 - app-marketing-google-ads-bigquery
