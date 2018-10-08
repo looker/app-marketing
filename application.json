@@ -9,7 +9,7 @@
     "visualization": true
   },
   "home": {
-    "name": "Digital Marketing Overview",
+    "name": "Overview",
     "type": "dashboardCollection",
     "permalink": "overview",
     "dashboardCollection": {
@@ -280,6 +280,7 @@
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/source-google-ads",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -437,6 +438,7 @@
             }
           ],
           "name": "Campaigns",
+          "icon": "marketing-analytics/campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
         },
@@ -446,6 +448,7 @@
           "descriptionSecondary": "",
           "name": "Optimizations",
           "permalink": "optimizations",
+          "icon": "marketing-analytics/optimizations",
           "filters": [
             {
               "defaultValue": "28 day",
@@ -912,6 +915,7 @@
         },
         {
           "name": "Change History",
+          "icon": "marketing-analytics/change-history",
           "permalink": "change_history",
           "type": "dashboardCollection",
           "dashboardCollection": {
@@ -947,6 +951,7 @@
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/source-facebook",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -987,6 +992,7 @@
         {
           "permalink": "fb_campaigns",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/campaigns",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -1097,6 +1103,7 @@
           "description": "Take immediate action to optimize your marketing spend and improve results. These opportunity reports show you what to stop doing and what to do more of.",
           "descriptionSecondary": "",
           "name": "Optimizations",
+          "icon": "marketing-analytics/optimizations",
           "permalink": "fb_optimizations",
           "type": "reports",
           "filters": [
@@ -1399,6 +1406,7 @@
       "name": "LinkedIn Ads",
       "pages": [
         {
+          "icon": "marketing-analytics/source-linkedin",
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
@@ -1536,6 +1544,7 @@
             }
           ],
           "name": "Campaigns",
+          "icon": "marketing-analytics/campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
         }
@@ -1545,7 +1554,7 @@
     {
       "permalink": "bing",
       "description": "",
-      "icon": "marketing-analytics/social",
+      "icon": "marketing-analytics/bing",
       "name": "Bing Ads",
       "": "",
       "pages": [
@@ -1553,6 +1562,7 @@
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/source-bing",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -1712,11 +1722,13 @@
             }
           ],
           "name": "Campaigns",
+          "icon": "marketing-analytics/campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
         },
         {
           "name": "Optimizations",
+          "icon": "marketing-analytics/optimizations",
           "permalink": "optimizations",
           "pageSections": [
             {
