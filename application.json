@@ -277,7 +277,7 @@
       "enabledByDefault": true,
       "pages": [
         {
-          "name": "Overview",
+          "name": "Cross-Channel Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
           "icon": "marketing-analytics/source-google-ads",
