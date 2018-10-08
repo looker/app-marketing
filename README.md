@@ -1,71 +1,48 @@
 # Marketing Analytics by Looker
 
-### Using as an App
+LookML files for setting up the digital marketing application. This is the core project that combines the analysis of multiple data sources and packages it into an application. This project includes the model file, text files and application.json file that structures the application.
 
-To use as an app, you first need to add a Google adapter in a project named `ama_adwords_adapter` and a Facebook adapter in a project named `ama_fb_adapter` as specified in the manifest.lkml.
+### Using as an Application
 
-By default `ama_adwords_adapter` can be connected to the [AdWords BQDTS model](https://github.com/looker/ama_adwords_bqdts_adapter) and `ama_fb_adapter` to either Stitch's [Facebook Ads model](https://github.com/looker/ama_fb_stitch_adapter) or Fivetran's  [Facebook Ads model](https://github.com/looker/ama_fb_fivetran_adapter).
+To use this application, you first need to add the projects and their adapters for all the available data sources. For example, Google Ads adapter is in a project named `app-marketing-google-ads-adapter` and a Facebook adapter in a project named `app-marketing-facebook-ads-adapter` as specified in the manifest.lkml.
 
-The Google Adapter is assumed to pass the following explores and views:
+Note: This requires the Project Import feature currently in /admin/labs to be enabled on your Looker instance.
 
-#### Account Structure
 
-ad.view:
- - ad_adapter
+Details on installing the application can be found here: [How To: Enable Application on Customer Instance](https://docs.google.com/document/d/15g5Xhr1YziFKeYvZkGYIDj94WyilJ08aT9RA-JLc9YQ).
 
-ad_group.view:
- - ad_group_adapter
+List of all projects that can be included with app-marketing:
 
-campaign.view:
- - campaign_adapter
+LookML files for different data sources:
+- app-marekting-google-ads
+- app-marketing-facebook-ads
+- app-marketing-linkedin-ads
+- app-marketing-bing-ads
 
-customer.view:
- - customer_adapter
+Google Ads Adapters:
+- app-marketing-google-ads-fivetran-bigquery
+- app-marketing-google-ads-transfer-bigquery
+- app-marketing-google-ads-stitch-redshift
 
-#### Targeting Criteria
+Facebook Ads Adapters:
+- app-marketing-facebook-ads-stitch-redshift
+- app-marketing-facebook-ads-fivetran-bigquery
 
-age_range.view
- - age_range
+LinkedIn Ads Adapter:
+- app-marketing-linkedin-ads-fivetran-bigquery
 
-audience.view
- - audience_adapter
+Bing Ads Adapter:
+- app-marketing-bing-ads-fivetran-bigquery
 
-gender.view
- - gender_adapter
-
-geo.view
- - geotargeting
-
-keyword.view
- - keyword_adapter
-
-parental_status.view
- - parental_status
-
-video.view
- - video
-
-#### Reports
-
-ad_impressions.view
-
-Account Stats
- - ad_impressions_adapter
- - ad_impressions_hour_adapter
-
-Campaign Stats
- - ad_impressions_campaign_adapter
- - ad_impressions_campaign_hour_adapter
-
-Ad Group Stats
- - ad_impressions_ad_group_adapter
- - ad_impressions_ad_group_hour_adapter
-
-Keyword Stats
- - ad_impressions_keyword_adapter
-
-Ad Stats
- - ad_impressions_ad_adapter
-
-Targeting Reports
- - ad_impressions * [age_range, audience, gender, geo, parental_status, video]
+In Progress:
+- app-marketing-google-ads-bigquery
+- app-marketing-google-ads-redshift
+- app-marketing-google-ads-fivetran-redshift
+- app-marketing-google-ads-stitch-bigquery
+- app-marketing-google-ads-stitch-snowflake
+- app-marketing-google-ads-fivetran-snowflake
+- app-marketing-facebook-ads-redshift
+- app-marketing-facebook-ads-fivetran-snowflake
+- app-marketing-facebook-ads-fivetran-redshift
+- app-marketing-facebook-ads-stitch-bigquery
+- app-marketing-facebook-ads-stitch-snowflake

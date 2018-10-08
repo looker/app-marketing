@@ -9,7 +9,7 @@
     "visualization": true
   },
   "home": {
-    "name": "Digital Marketing Overview",
+    "name": "Overview",
     "type": "dashboardCollection",
     "permalink": "overview",
     "dashboardCollection": {
@@ -223,6 +223,49 @@
           "field": "fact.average_click_rate"
         }
       ]
+    },
+    {
+      "id": "cross_channel_campaign",
+      "name": "Campaigns",
+      "model": "marketing_analytics",
+      "view": "cross_channel_ad_impressions",
+      "params": "fields=fact.date_period&f[fact.period]=month&f[fact.date_period_comparison_period]=Yes&f[fact.date_period_before_latest]=Yes&sorts=fact.date_period+desc",
+      "keyColumn": "fact.campaign_name",
+      "columns": [
+        {
+          "name": "Campaign",
+          "field": "fact.campaign_name"
+        },
+        {
+          "name": "Spend",
+          "field": "fact.total_cost"
+        },
+        {
+          "name": "Conv.",
+          "label": "# of Conversions",
+          "field": "fact.total_conversions"
+        },
+        {
+          "name": "CPA",
+          "label": "Cost Per Acquistion (Conversion)",
+          "field": "fact.average_cost_per_conversion"
+        },
+        {
+          "name": "Conv. Rate (CR)",
+          "label": "Conversion Rate",
+          "field": "fact.average_conversion_rate"
+        },
+        {
+          "name": "CPC",
+          "label": "Cost Per Click",
+          "field": "fact.average_cost_per_click"
+        },
+        {
+          "name": "CTR",
+          "label": "Click though Rate",
+          "field": "fact.average_click_rate"
+        }
+      ]
     }
   ],
   "name": "Digital Marketing",
@@ -237,6 +280,7 @@
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/source-google-ads",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -394,6 +438,7 @@
             }
           ],
           "name": "Campaigns",
+          "icon": "marketing-analytics/campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
         },
@@ -403,6 +448,7 @@
           "descriptionSecondary": "",
           "name": "Optimizations",
           "permalink": "optimizations",
+          "icon": "marketing-analytics/optimizations",
           "filters": [
             {
               "defaultValue": "28 day",
@@ -869,6 +915,7 @@
         },
         {
           "name": "Change History",
+          "icon": "marketing-analytics/change-history",
           "permalink": "change_history",
           "type": "dashboardCollection",
           "dashboardCollection": {
@@ -904,6 +951,7 @@
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/source-facebook",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -944,6 +992,7 @@
         {
           "permalink": "fb_campaigns",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/campaigns",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -1054,6 +1103,7 @@
           "description": "Take immediate action to optimize your marketing spend and improve results. These opportunity reports show you what to stop doing and what to do more of.",
           "descriptionSecondary": "",
           "name": "Optimizations",
+          "icon": "marketing-analytics/optimizations",
           "permalink": "fb_optimizations",
           "type": "reports",
           "filters": [
@@ -1356,6 +1406,7 @@
       "name": "LinkedIn Ads",
       "pages": [
         {
+          "icon": "marketing-analytics/source-linkedin",
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
@@ -1377,12 +1428,6 @@
               "dashboardAlias": "Period"
             },
             {
-              "field": "fact.campaign_name",
-              "name": "Campaign",
-              "type": "Table",
-              "tableID": "li_campaign"
-            },
-            {
               "autoSuggest": {
                 "model": "marketing_analytics",
                 "view": "li_period_fact"
@@ -1391,6 +1436,12 @@
               "dashboardAlias": "Account",
               "name": "Account",
               "type": "Select"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "li_campaign"
             }
           ]
         },
@@ -1475,13 +1526,6 @@
               "dashboardAlias": "Period"
             },
             {
-              "field": "fact.campaign_name",
-              "dashboardAlias": "Campaign",
-              "name": "Campaign",
-              "type": "Table",
-              "tableID": "campaign"
-            },
-            {
               "autoSuggest": {
                 "model": "marketing_analytics",
                 "view": "li_period_fact"
@@ -1490,9 +1534,17 @@
               "dashboardAlias": "Account",
               "name": "Account",
               "type": "Select"
+            },
+            {
+              "field": "fact.campaign_name",
+              "dashboardAlias": "Campaign",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "li_campaign"
             }
           ],
           "name": "Campaigns",
+          "icon": "marketing-analytics/campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
         }
@@ -1502,7 +1554,7 @@
     {
       "permalink": "bing",
       "description": "",
-      "icon": "marketing-analytics/social",
+      "icon": "marketing-analytics/bing",
       "name": "Bing Ads",
       "": "",
       "pages": [
@@ -1510,6 +1562,7 @@
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
+          "icon": "marketing-analytics/source-bing",
           "dashboardCollection": {
             "dashboards": [
               {
@@ -1528,12 +1581,6 @@
               "dashboardAlias": "Period"
             },
             {
-              "field": "fact.campaign_name",
-              "name": "Campaign",
-              "type": "Table",
-              "tableID": "bi_campaign"
-            },
-            {
               "autoSuggest": {
                 "model": "marketing_analytics",
                 "view": "bing_ad_group_date_fact"
@@ -1542,6 +1589,12 @@
               "dashboardAlias": "Account",
               "name": "Account",
               "type": "Select"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "bi_campaign"
             },
             {
               "autoSuggest": {
@@ -1639,12 +1692,6 @@
               "dashboardAlias": "Period"
             },
             {
-              "field": "fact.campaign_name",
-              "name": "Campaign",
-              "type": "Table",
-              "tableID": "bi_campaign"
-            },
-            {
               "autoSuggest": {
                 "model": "marketing_analytics",
                 "view": "bi_period_fact"
@@ -1653,6 +1700,12 @@
               "dashboardAlias": "Account",
               "name": "Account",
               "type": "Select"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "bi_campaign"
             },
             {
               "autoSuggest": {
@@ -1669,11 +1722,13 @@
             }
           ],
           "name": "Campaigns",
+          "icon": "marketing-analytics/campaigns",
           "permalink": "campaigns",
           "type": "dashboardCollection"
         },
         {
           "name": "Optimizations",
+          "icon": "marketing-analytics/optimizations",
           "permalink": "optimizations",
           "pageSections": [
             {
@@ -1778,19 +1833,19 @@
                   "variations": [
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_ad_date_fact?fields=last_fact.average_cost_per_conversion,fact.average_cost_per_conversion,fact.average_cost_per_conversion_period_percent_change_abs,fact.ad_title,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.cost_per_conversion_big_mover]=Yes&sorts=fact.average_cost_per_conversion_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_cost_per_conversion_period_percent_change_abs%22%5D%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_cost_per_conversion%22%2C%22name%22%3A%22Last+Fact%22%2C%22axisId%22%3A%22last_fact.average_cost_per_conversion%22%7D%2C%7B%22id%22%3A%22fact.average_cost_per_conversion%22%2C%22name%22%3A%22Fact%22%2C%22axisId%22%3A%22fact.average_cost_per_conversion%22%7D%5D%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22series_labels%22%3A%7B%22last_fact.average_cost_per_conversion%22%3A%22Last+Period+CPA%22%2C%22fact.average_cost_per_conversion%22%3A%22This+Period+CPA%22%7D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.cost_per_conversion_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_ad_date_fact?fields=last_fact.average_cost_per_conversion,fact.average_cost_per_conversion,fact.average_cost_per_conversion_period_percent_change_abs,fact.ad_title,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.cost_per_conversion_big_mover]=Yes&sorts=fact.average_cost_per_conversion_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_cost_per_conversion%22%3A%22Last+Period+CPA%22%2C%22fact.average_cost_per_conversion%22%3A%22This+Period+CPA%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_cost_per_conversion%22%2C%22name%22%3A%22Last+Fact%22%2C%22axisId%22%3A%22last_fact.average_cost_per_conversion%22%7D%2C%7B%22id%22%3A%22fact.average_cost_per_conversion%22%2C%22name%22%3A%22Fact%22%2C%22axisId%22%3A%22fact.average_cost_per_conversion%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_cost_per_conversion_period_percent_change_abs%22%2C%22fact.ad_group_name%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.cost_per_conversion_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "by Cost Per Conversion",
                       "permalink": "big_movers_ads_cpa"
                     },
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_ad_date_fact?fields=last_fact.average_conversion_rate,fact.average_conversion_rate,fact.average_conversion_rate_period_percent_change_abs,fact.ad_title,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.conversion_rate_big_mover]=Yes&sorts=fact.average_conversion_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22fact.average_conversion_rate_period_percent_change_abs%22%5D%2C%22series_labels%22%3A%7B%22last_fact.average_conversion_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_conversion_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_conversion_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_conversion_rate%22%7D%2C%7B%22id%22%3A%22fact.average_conversion_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_conversion_rate%22%7D%5D%7D%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22fact.conversion_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_ad_date_fact?fields=last_fact.average_conversion_rate,fact.average_conversion_rate,fact.average_conversion_rate_period_percent_change_abs,fact.ad_title,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.conversion_rate_big_mover]=Yes&sorts=fact.average_conversion_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22fact.average_conversion_rate_period_percent_change_abs%22%2C%22fact.ad_group_name%22%2C%22fact.campaign_name%22%5D%2C%22series_labels%22%3A%7B%22last_fact.average_conversion_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_conversion_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_conversion_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_conversion_rate%22%7D%2C%7B%22id%22%3A%22fact.average_conversion_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_conversion_rate%22%7D%5D%7D%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22fact.conversion_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Conversion Rate",
                       "permalink": "big_movers_ads_conversion_rate"
                     },
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_ad_date_fact?fields=last_fact.average_click_rate,fact.average_click_rate,fact.average_click_rate_period_percent_change_abs,fact.ad_title,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.click_rate_big_mover]=Yes&sorts=fact.average_click_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22fact.average_click_rate_period_percent_change_abs%22%5D%2C%22series_labels%22%3A%7B%22last_fact.average_click_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_click_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_click_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_click_rate%22%7D%2C%7B%22id%22%3A%22fact.average_click_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_click_rate%22%7D%5D%7D%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22fact.click_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_ad_date_fact?fields=last_fact.average_click_rate,fact.average_click_rate,fact.average_click_rate_period_percent_change_abs,fact.ad_title,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.click_rate_big_mover]=Yes&sorts=fact.average_click_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_click_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_click_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_click_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_click_rate%22%7D%2C%7B%22id%22%3A%22fact.average_click_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_click_rate%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_click_rate_period_percent_change_abs%22%2C%22fact.ad_group_name%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22fact.click_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Click Through Rate",
                       "permalink": "big_movers_ads_ctr"
                     }
@@ -1805,19 +1860,19 @@
                   "variations": [
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_keyword_date_fact?fields=last_fact.average_cost_per_conversion,fact.average_cost_per_conversion,fact.average_cost_per_conversion_period_percent_change_abs,fact.keyword,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.cost_per_conversion_big_mover]=Yes&sorts=fact.average_cost_per_conversion_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_cost_per_conversion_period_percent_change_abs%22%5D%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_cost_per_conversion%22%2C%22name%22%3A%22Last+Fact%22%2C%22axisId%22%3A%22last_fact.average_cost_per_conversion%22%7D%2C%7B%22id%22%3A%22fact.average_cost_per_conversion%22%2C%22name%22%3A%22Fact%22%2C%22axisId%22%3A%22fact.average_cost_per_conversion%22%7D%5D%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22series_labels%22%3A%7B%22last_fact.average_cost_per_conversion%22%3A%22Last+Period+CPA%22%2C%22fact.average_cost_per_conversion%22%3A%22This+Period+CPA%22%7D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.cost_per_conversion_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_keyword_date_fact?fields=last_fact.average_cost_per_conversion,fact.average_cost_per_conversion,fact.average_cost_per_conversion_period_percent_change_abs,fact.keyword,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.cost_per_conversion_big_mover]=Yes&sorts=fact.average_cost_per_conversion_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_cost_per_conversion%22%3A%22Last+Period+CPA%22%2C%22fact.average_cost_per_conversion%22%3A%22This+Period+CPA%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_cost_per_conversion%22%2C%22name%22%3A%22Last+Fact%22%2C%22axisId%22%3A%22last_fact.average_cost_per_conversion%22%7D%2C%7B%22id%22%3A%22fact.average_cost_per_conversion%22%2C%22name%22%3A%22Fact%22%2C%22axisId%22%3A%22fact.average_cost_per_conversion%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_cost_per_conversion_period_percent_change_abs%22%2C%22fact.ad_group_name%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.cost_per_conversion_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Cost Per Conversion",
                       "permalink": "big_movers_keywords_cpa"
                     },
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_keyword_date_fact?fields=last_fact.average_conversion_rate,fact.average_conversion_rate,fact.average_conversion_rate_period_percent_change_abs,fact.keyword,fact.ad_group_name,fact.campaign_name&f[fact.conversion_rate_big_mover]=Yes&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&sorts=fact.average_conversion_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22fact.average_conversion_rate_period_percent_change_abs%22%5D%2C%22colors%22%3A%5B%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_conversion_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_conversion_rate%22%7D%2C%7B%22id%22%3A%22fact.average_conversion_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_conversion_rate%22%7D%5D%7D%5D%2C%22series_labels%22%3A%7B%22last_fact.average_conversion_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_conversion_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%7D&filter_config=%7B%22fact.conversion_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_keyword_date_fact?fields=last_fact.average_conversion_rate,fact.average_conversion_rate,fact.average_conversion_rate_period_percent_change_abs,fact.keyword,fact.ad_group_name,fact.campaign_name&f[fact.conversion_rate_big_mover]=Yes&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&sorts=fact.average_conversion_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_conversion_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_conversion_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_conversion_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_conversion_rate%22%7D%2C%7B%22id%22%3A%22fact.average_conversion_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_conversion_rate%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_conversion_rate_period_percent_change_abs%22%2C%22fact.ad_group_name%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.conversion_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Conversion Rate",
                       "permalink": "big_movers_keywords_cr"
                     },
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_keyword_date_fact?fields=last_fact.average_click_rate,fact.average_click_rate,fact.average_click_rate_period_percent_change_abs,fact.keyword,fact.ad_group_name,fact.campaign_name&f[fact.click_rate_big_mover]=Yes&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&sorts=fact.average_click_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22fact.average_click_rate_period_percent_change_abs%22%5D%2C%22colors%22%3A%5B%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_click_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_click_rate%22%7D%2C%7B%22id%22%3A%22fact.average_click_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_click_rate%22%7D%5D%7D%5D%2C%22series_labels%22%3A%7B%22last_fact.average_click_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_click_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%7D&filter_config=%7B%22fact.click_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_keyword_date_fact?fields=fact.keyword,fact.ad_group_name,fact.campaign_name,last_fact.average_click_rate,fact.average_click_rate,fact.average_click_rate_period_percent_change_abs&f[fact.click_rate_big_mover]=Yes&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&sorts=fact.average_click_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_click_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_click_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_click_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_click_rate%22%7D%2C%7B%22id%22%3A%22fact.average_click_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_click_rate%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_click_rate_period_percent_change_abs%22%2C%22fact.ad_group_name%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.click_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Click Through Rate",
                       "permalink": "big_movers_keywords_ctr"
                     }
@@ -1832,19 +1887,19 @@
                   "variations": [
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_ad_group_date_fact?fields=last_fact.average_cost_per_conversion,fact.average_cost_per_conversion,fact.average_cost_per_conversion_period_percent_change_abs,last_fact.ad_group_name,last_fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.cost_per_conversion_big_mover]=Yes&sorts=fact.average_cost_per_conversion_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_cost_per_conversion_period_percent_change_abs%22%5D%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_cost_per_conversion%22%2C%22name%22%3A%22Last+Fact%22%2C%22axisId%22%3A%22last_fact.average_cost_per_conversion%22%7D%2C%7B%22id%22%3A%22fact.average_cost_per_conversion%22%2C%22name%22%3A%22Fact%22%2C%22axisId%22%3A%22fact.average_cost_per_conversion%22%7D%5D%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22series_labels%22%3A%7B%22last_fact.average_cost_per_conversion%22%3A%22Last+Period+CPA%22%2C%22fact.average_cost_per_conversion%22%3A%22This+Period+CPA%22%7D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.cost_per_conversion_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_ad_group_date_fact?fields=last_fact.average_cost_per_conversion,fact.average_cost_per_conversion,fact.average_cost_per_conversion_period_percent_change_abs,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.cost_per_conversion_big_mover]=Yes&sorts=fact.average_cost_per_conversion_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23f1cc9a%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_cost_per_conversion%22%3A%22Last+Period+CPA%22%2C%22fact.average_cost_per_conversion%22%3A%22This+Period+CPA%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%2210%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_cost_per_conversion%22%2C%22name%22%3A%22Last+Fact%22%2C%22axisId%22%3A%22last_fact.average_cost_per_conversion%22%7D%2C%7B%22id%22%3A%22fact.average_cost_per_conversion%22%2C%22name%22%3A%22Fact%22%2C%22axisId%22%3A%22fact.average_cost_per_conversion%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_cost_per_conversion_period_percent_change_abs%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.cost_per_conversion_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Cost Per Conversion",
                       "permalink": "big_movers_ad_group_cpa"
                     },
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_ad_group_date_fact?fields=last_fact.average_conversion_rate,fact.average_conversion_rate,fact.average_conversion_rate_period_percent_change_abs,last_fact.ad_group_name,last_fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.conversion_rate_big_mover]=Yes&sorts=last_fact.average_conversion_rate+desc&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_conversion_rate_period_percent_change_abs%22%5D%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_conversion_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_conversion_rate%22%7D%2C%7B%22id%22%3A%22fact.average_conversion_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_conversion_rate%22%7D%5D%7D%5D%2C%22series_labels%22%3A%7B%22last_fact.average_conversion_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_conversion_rate%22%3A%22This+Period+Conversion+Rate%22%7D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%2C%22fact.conversion_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_ad_group_date_fact?fields=last_fact.average_conversion_rate,fact.average_conversion_rate,fact.average_conversion_rate_period_percent_change_abs,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.conversion_rate_big_mover]=Yes&sorts=last_fact.average_conversion_rate+desc&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_conversion_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_conversion_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_conversion_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_conversion_rate%22%7D%2C%7B%22id%22%3A%22fact.average_conversion_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_conversion_rate%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_conversion_rate_period_percent_change_abs%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%2C%22fact.conversion_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Conversion Rate",
                       "permalink": "big_movers_ad_group_cr"
                     },
                     {
                       "description": "",
-                      "exploreParams": "marketing_analytics/bing_ad_group_date_fact?fields=last_fact.average_click_rate,fact.average_click_rate,fact.average_click_rate_period_percent_change_abs,last_fact.ad_group_name,last_fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.click_rate_big_mover]=Yes&sorts=fact.average_click_rate_period_percent_change_abs+desc&limit=50&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_click_rate_period_percent_change_abs%22%5D%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_click_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_click_rate%22%7D%2C%7B%22id%22%3A%22fact.average_click_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_click_rate%22%7D%5D%7D%5D%2C%22series_labels%22%3A%7B%22last_fact.average_click_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_click_rate%22%3A%22This+Period+Conversion+Rate%22%7D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%2C%22fact.click_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+                      "exploreParams": "marketing_analytics/bing_ad_group_date_fact?fields=last_fact.average_click_rate,fact.average_click_rate,fact.average_click_rate_period_percent_change_abs,fact.ad_group_name,fact.campaign_name&f[fact.period]=28+day&f[fact.date_date]=28+days&f[fact.date_period_latest]=Yes&f[fact.click_rate_big_mover]=Yes&sorts=last_fact.average_click_rate+desc&vis=%7B%22stacking%22%3A%22%22%2C%22colors%22%3A%5B%22%23a6b7ff%22%2C%22%237869df%22%2C%22%236e98f9%22%2C%22%238ac8ca%22%2C%22%23dc9d4f%22%2C%22%23dc9d4f%22%2C%22%23ea9895%22%2C%22%23d06180%22%2C%22%23dc9d4f%22%2C%22%234bb86a%22%2C%22%23a4a6a9%22%2C%22%23a6b7ff%22%2C%22%23afe8fd%22%2C%22%23ea989%22%5D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22last_fact.average_click_rate%22%3A%22Last+Period+Conversion+Rate%22%2C%22fact.average_click_rate%22%3A%22This+Period+Conversion+Rate%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22maxValue%22%3Anull%2C%22minValue%22%3Anull%2C%22orientation%22%3A%22bottom%22%2C%22showLabels%22%3Afalse%2C%22showValues%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%2C%22unpinAxis%22%3Afalse%2C%22valueFormat%22%3Anull%2C%22series%22%3A%5B%7B%22id%22%3A%22last_fact.average_click_rate%22%2C%22name%22%3A%22Last+Fact+Conversion+Rate%22%2C%22axisId%22%3A%22last_fact.average_click_rate%22%7D%2C%7B%22id%22%3A%22fact.average_click_rate%22%2C%22name%22%3A%22Fact+Conversion+Rate%22%2C%22axisId%22%3A%22fact.average_click_rate%22%7D%5D%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_bar%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hidden_fields%22%3A%5B%22fact.average_click_rate_period_percent_change_abs%22%2C%22fact.campaign_name%22%5D%7D&filter_config=%7B%22fact.period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22fact.date_period_latest%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%2C%22error%22%3Afalse%7D%5D%2C%22fact.click_rate_big_mover%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
                       "name": "By Click Through Rate",
                       "permalink": "big_movers_ad_group_ctr"
                     }
@@ -1988,12 +2043,6 @@
               "dashboardAlias": "Period"
             },
             {
-              "field": "fact.campaign_name",
-              "name": "Campaign",
-              "type": "Table",
-              "tableID": "bi_campaign"
-            },
-            {
               "autoSuggest": {
                 "model": "marketing_analytics",
                 "view": "bing_ad_group_date_fact"
@@ -2002,6 +2051,12 @@
               "dashboardAlias": "Account",
               "name": "Account",
               "type": "Select"
+            },
+            {
+              "field": "fact.campaign_name",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "bi_campaign"
             },
             {
               "autoSuggest": {
@@ -2074,6 +2129,149 @@
         }
 
       ]
+    },
+    {
+      "description": "",
+      "icon": "marketing-analytics/search",
+      "name": "All Sources",
+      "pages": [
+        {
+          "dashboardCollection": {
+            "dashboards": [
+              {
+                "lookmlID": "marketing_analytics::cross_channel_spend",
+                "name": "Spend",
+                "permalink": "spend",
+                "singleValueReference": "spend"
+              },
+              {
+                "lookmlID": "marketing_analytics::cross_channel_conversions",
+                "name": "Conversions",
+                "permalink": "conversions",
+                "singleValueReference": "conversions"
+              },
+              {
+                "lookmlID": "marketing_analytics::cross_channel_cost_per_conversion",
+                "name": "Cost Per Conversion",
+                "permalink": "cost_per_conversion",
+                "singleValueReference": "cost_per_conversion"
+              },
+              {
+                "lookmlID": "marketing_analytics::cross_channel_conversion_rate",
+                "name": "Conversion Rate",
+                "permalink": "conversion_rate",
+                "singleValueReference": "conversion_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::cross_channel_cost_per_click",
+                "name": "Cost Per Click",
+                "permalink": "cost_per_click",
+                "singleValueReference": "cost_per_click"
+              },
+              {
+                "lookmlID": "marketing_analytics::cross_channel_click_through_rate",
+                "name": "Click Through Rate",
+                "permalink": "click_through_rate",
+                "singleValueReference": "click_through_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::cross_channel_roas",
+                "name": "Return On Ad Spend",
+                "permalink": "roas",
+                "singleValueReference": "roas",
+                "zeroHide": true
+              }
+            ],
+            "defaultDashboard": "cost_per_conversion"
+          },
+          "singleValuesSources": [
+            {
+              "model": "marketing_analytics",
+              "view": "cross_channel_ad_impressions",
+              "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
+              "fields": {
+                "spend": {
+                  "inverseChange": true,
+                  "field": "fact.total_cost"
+                },
+                "conversions": {
+                  "field": "fact.total_conversions"
+                },
+                "cost_per_conversion": {
+                  "inverseChange": true,
+                  "field": "fact.average_cost_per_conversion"
+                },
+                "conversion_rate": {
+                  "field": "fact.average_conversion_rate"
+                },
+                "cost_per_click": {
+                  "inverseChange": true,
+                  "field": "fact.average_cost_per_click"
+                },
+                "click_through_rate": {
+                  "field": "fact.average_click_rate"
+                },
+                "roas": {
+                  "field": "fact.average_value_per_cost"
+                }
+              }
+            }
+          ],
+          "filters": [
+            {
+              "defaultValue": "28 day",
+              "field": "fact.period",
+              "name": "Time Frame",
+              "type": "TimeFrame",
+              "dashboardAlias": "Period"
+            },
+            {
+              "autoSuggest": {
+                "model": "marketing_analytics",
+                "view": "cross_channel_ad_impressions"
+              },
+              "field": "fact.account_name",
+              "dashboardAlias": "Account",
+              "name": "Account",
+              "type": "Select"
+            },
+            {
+              "autoSuggest": {
+                "model": "marketing_analytics",
+                "view": "cross_channel_ad_impressions"
+              },
+              "field": "fact.channel",
+              "dashboardAlias": "Channel",
+              "name": "Channel",
+              "type": "Select"
+            },
+            {
+              "field": "fact.campaign_name",
+              "dashboardAlias": "Campaign",
+              "name": "Campaign",
+              "type": "Table",
+              "tableID": "cross_channel_campaign"
+            },
+            {
+              "autoSuggest": {
+                "model": "marketing_analytics",
+                "view": "cross_channel_ad_impressions"
+              },
+              "facetedBy": [
+                "fact.campaign_name"
+              ],
+              "field": "fact.ad_group_name",
+              "dashboardAlias": "Ad Group",
+              "name": "Ad Group",
+              "type": "Select"
+            }
+          ],
+          "name": "Campaigns",
+          "permalink": "campaigns",
+          "type": "dashboardCollection"
+        }
+      ],
+      "permalink": "all_sources"
     }
   ]
 }
