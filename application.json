@@ -9,7 +9,7 @@
     "visualization": true
   },
   "home": {
-    "name": "Overview",
+    "name": "Cross-Channel Overview",
     "type": "dashboardCollection",
     "permalink": "overview",
     "dashboardCollection": {
@@ -277,7 +277,7 @@
       "enabledByDefault": true,
       "pages": [
         {
-          "name": "Cross-Channel Overview",
+          "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
           "icon": "marketing-analytics/source-google-ads",
