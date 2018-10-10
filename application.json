@@ -912,31 +912,6 @@
             }
           ],
           "type": "reports"
-        },
-        {
-          "name": "Change History",
-          "icon": "marketing-analytics/change-history",
-          "permalink": "change_history",
-          "type": "dashboardCollection",
-          "dashboardCollection": {
-            "dashboards": [
-              {
-                "lookmlID": "marketing_analytics::adwords_activity",
-                "name": "Default",
-                "permalink": ""
-              }
-            ]
-          },
-          "filters": [
-            {
-              "disabled": true,
-              "defaultValue": "28 day",
-              "field": "fact.period",
-              "name": "Time Frame",
-              "type": "TimeFrame",
-              "dashboardAlias": "Period"
-            }
-          ]
         }
       ],
       "permalink": "search"
