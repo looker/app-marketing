@@ -2112,6 +2112,7 @@
       "pages": [
         {
           "dashboardCollection": {
+          "icon": "marketing-analytics/source-all",
             "dashboards": [
               {
                 "lookmlID": "marketing_analytics::cross_channel_spend",
