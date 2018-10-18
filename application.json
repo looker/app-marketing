@@ -237,6 +237,10 @@
           "field": "fact.campaign_name"
         },
         {
+          "name": "Platform",
+          "field": "fact.platform"
+        },
+        {
           "name": "Spend",
           "field": "fact.total_cost"
         },
