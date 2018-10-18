@@ -303,12 +303,12 @@
               "dashboardAlias": "Campaign",
               "name": "Campaign",
               "type": "Table",
-              "tableID": "campaign"
+              "tableID": "cross_channel_campaign"
             },
             {
               "autoSuggest": {
                 "model": "marketing_analytics",
-                "view": "ad_impressions_ad_group"
+                "view": "cross_channel_ad_impressions"
               },
               "facetedBy": [
                 "campaign.name"
