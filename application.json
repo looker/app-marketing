@@ -34,7 +34,7 @@
         "dashboardAlias": "Campaign",
         "name": "Campaign",
         "type": "Table",
-        "tableID": "campaign"
+        "tableID": "cross_channel_campaign"
       },
       {
         "autoSuggest": {
@@ -307,7 +307,7 @@
               "dashboardAlias": "Campaign",
               "name": "Campaign",
               "type": "Table",
-              "tableID": "cross_channel_campaign"
+              "tableID": "campaign"
             },
             {
               "autoSuggest": {
