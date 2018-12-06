@@ -369,6 +369,24 @@
                 "name": "Click Through Rate",
                 "permalink": "click_through_rate",
                 "singleValueReference": "click_through_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::campaign_metrics_clicks",
+                "name": "Clicks",
+                "permalink": "clicks",
+                "singleValueReference": "clicks"
+              },
+              {
+                "lookmlID": "marketing_analytics::campaign_metrics_impressions",
+                "name": "Impressions",
+                "permalink": "impressions",
+                "singleValueReference": "impressions"
+              },
+              {
+                "lookmlID": "marketing_analytics::campaign_metrics_cost_per_impression",
+                "name": "Cost Per Impression",
+                "permalink": "cost_per_impression",
+                "singleValueReference": "cost_per_impression"
               }
             ],
             "defaultDashboard": "cost_per_conversion"
@@ -408,6 +426,9 @@
                 },
                 "impressions": {
                   "field": "fact.total_impressions"
+                },
+                "cost_per_impression": {
+                  "field": "fact.average_cost_per_impression"
                 }
               }
             }
@@ -1009,6 +1030,24 @@
                 "name": "Click Through Rate",
                 "permalink": "click_through_rate",
                 "singleValueReference": "click_through_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::fb_campaign_metrics_clicks",
+                "name": "Clicks",
+                "permalink": "clicks",
+                "singleValueReference": "clicks"
+              },
+              {
+                "lookmlID": "marketing_analytics::fb_campaign_metrics_impressions",
+                "name": "Impressions",
+                "permalink": "impressions",
+                "singleValueReference": "impressions"
+              },
+              {
+                "lookmlID": "marketing_analytics::fb_campaign_metrics_cost_per_impression",
+                "name": "Cost Per Impression",
+                "permalink": "cost_per_impression",
+                "singleValueReference": "cost_per_impression"
               }
             ],
             "defaultDashboard": "cost_per_conversion"
@@ -1042,6 +1081,15 @@
                 },
                 "return_on_ad_spend": {
                   "field": "fact.average_value_per_cost"
+                },
+                "clicks": {
+                  "field": "fact.total_clicks"
+                },
+                "impressions": {
+                  "field": "fact.total_impressions"
+                },
+                "cost_per_impression": {
+                  "field": "fact.average_cost_per_impression"
                 }
               }
             }
@@ -1480,6 +1528,24 @@
                 "name": "Click Through Rate",
                 "permalink": "click_through_rate",
                 "singleValueReference": "click_through_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_clicks",
+                "name": "Clicks",
+                "permalink": "clicks",
+                "singleValueReference": "clicks"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_impressions",
+                "name": "Impressions",
+                "permalink": "impressions",
+                "singleValueReference": "impressions"
+              },
+              {
+                "lookmlID": "marketing_analytics::li_campaign_metrics_cost_per_impression",
+                "name": "Cost Per Impression",
+                "permalink": "cost_per_impression",
+                "singleValueReference": "cost_per_impression"
               }
             ],
             "defaultDashboard": "cost_per_conversion"
@@ -1510,6 +1576,15 @@
                 },
                 "click_through_rate": {
                   "field": "fact.average_click_rate"
+                },
+                "clicks": {
+                  "field": "fact.total_clicks"
+                },
+                "impressions": {
+                  "field": "fact.total_impressions"
+                },
+                "cost_per_impression": {
+                  "field": "fact.average_cost_per_impression"
                 }
               }
             }
@@ -1646,6 +1721,24 @@
                 "name": "Click Through Rate",
                 "permalink": "click_through_rate",
                 "singleValueReference": "click_through_rate"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_clicks",
+                "name": "Clicks",
+                "permalink": "clicks",
+                "singleValueReference": "clicks"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_impressions",
+                "name": "Impressions",
+                "permalink": "impressions",
+                "singleValueReference": "impressions"
+              },
+              {
+                "lookmlID": "marketing_analytics::bing_campaign_metrics_cost_per_impression",
+                "name": "Cost Per Impression",
+                "permalink": "cost_per_impression",
+                "singleValueReference": "cost_per_impression"
               }
             ],
             "defaultDashboard": "cost_per_conversion"
@@ -1676,6 +1769,15 @@
                 },
                 "click_through_rate": {
                   "field": "fact.average_click_rate"
+                },
+                "clicks": {
+                  "field": "fact.total_clicks"
+                },
+                "impressions": {
+                  "field": "fact.total_impressions"
+                },
+                "cost_per_impression": {
+                  "field": "fact.average_cost_per_impression"
                 }
               }
             }
