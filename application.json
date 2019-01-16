@@ -996,6 +996,13 @@
           "dashboardCollection": {
             "dashboards": [
               {
+                "lookmlID": "marketing_analytics::fb_campaign_metrics_roas",
+                "name": "Return On Ad Spend",
+                "permalink": "roas",
+                "singleValueReference": "roas",
+                "zeroHide": true
+              },
+              {
                 "lookmlID": "marketing_analytics::fb_campaign_metrics_spend",
                 "name": "Spend",
                 "permalink": "spend",
@@ -1090,6 +1097,9 @@
                 },
                 "cost_per_impression": {
                   "field": "fact.average_cost_per_impression"
+                },
+                "roas": {
+                  "field": "fact.average_value_per_cost"
                 }
               }
             }
