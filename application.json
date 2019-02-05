@@ -15,7 +15,7 @@
     "dashboardCollection": {
       "dashboards": [
         {
-          "lookmlID": "marketing_analytics::cross_channel_overview",
+          "lookmlID": "dashboards/287",
           "name": "Default",
           "permalink": ""
         }
