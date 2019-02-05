@@ -15,7 +15,7 @@
     "dashboardCollection": {
       "dashboards": [
         {
-          "lookmlID": "dashboards/287",
+          "ID": 287,
           "name": "Default",
           "permalink": ""
         }
@@ -288,7 +288,7 @@
           "dashboardCollection": {
             "dashboards": [
               {
-                "lookmlID": "marketing_analytics::adwords_overview",
+                "ID": 287,
                 "name": "Default",
                 "permalink": ""
               }
