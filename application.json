@@ -15,7 +15,7 @@
     "dashboardCollection": {
       "dashboards": [
         {
-          "ID": 287,
+          "id": 287,
           "name": "Default",
           "permalink": ""
         }
@@ -288,7 +288,7 @@
           "dashboardCollection": {
             "dashboards": [
               {
-                "ID": 287,
+                "id": 287,
                 "name": "Default",
                 "permalink": ""
               }
