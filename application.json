@@ -1079,9 +1079,6 @@
                 "click_through_rate": {
                   "field": "fact.average_click_rate"
                 },
-                "return_on_ad_spend": {
-                  "field": "fact.average_value_per_cost"
-                },
                 "clicks": {
                   "field": "fact.total_clicks"
                 },
