@@ -2427,11 +2427,11 @@
     },
     {
       "description": "",
-      "icon": "marketing-analytics/social",
+      "icon": "marketing-analytics/pinterest",
       "name": "Pinterest",
       "pages": [
           {
-          "icon": "marketing-analytics/source-linkedin",
+          "icon": "marketing-analytics/source-pinterest",
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
