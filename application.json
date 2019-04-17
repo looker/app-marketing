@@ -2431,7 +2431,7 @@
       "name": "Pinterest",
       "pages": [
           {
-          "icon": "marketing-analytics/source-pinterest",
+          "icon": "marketing-analytics/source-linkedin",
           "name": "Overview",
           "permalink": "overview",
           "type": "dashboardCollection",
