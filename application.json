@@ -2510,6 +2510,12 @@
             "singleValueReference": "click_through_rate"
           },
           {
+            "lookmlID": "marketing_analytics::pi_campaign_metrics_clicks",
+            "name": "Clicks",
+            "permalink": "clicks",
+            "singleValueReference": "clicks"
+          },
+          {
             "lookmlID": "marketing_analytics::pi_campaign_metrics_roas",
             "name": "Return On Ad Spend",
             "permalink": "roas",
@@ -2548,6 +2554,15 @@
             },
             "roas": {
               "field": "fact.average_value_per_cost"
+            },
+            "clicks": {
+              "field": "fact.total_clicks"
+            },
+            "impressions": {
+              "field": "fact.total_impressions"
+            },
+            "cost_per_impression": {
+              "field": "fact.average_cost_per_impression"
             }
           }
         }
