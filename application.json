@@ -2521,6 +2521,18 @@
             "permalink": "roas",
             "singleValueReference": "roas",
             "zeroHide": true
+          },
+          {
+            "lookmlID": "marketing_analytics::pi_campaign_metrics_impressions",
+            "name": "Impressions",
+            "permalink": "impressions",
+            "singleValueReference": "impressions"
+          },
+          {
+            "lookmlID": "marketing_analytics::pi_campaign_metrics_cpm",
+            "name": "Cost Per Impression",
+            "permalink": "cpm",
+            "singleValueReference": "cost_per_impression"
           }
         ],
         "defaultDashboard": "cost_per_conversion"
