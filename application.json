@@ -368,18 +368,6 @@
         ]
       },
       {
-        "title": "All Sources",
-        "key": "all_sources",
-        "disabled": true,
-        "items": [
-          {
-            "title": "Campaigns",
-            "path": "all_sources-campaigns",
-            "icon": "marketing-analytics/source-all"
-          }
-        ]
-      },
-      {
         "title": "Pinterest",
         "key": "pinterest",
         "disabled": true,
@@ -393,6 +381,18 @@
             "title": "Campaigns",
             "path": "pinterest-pinterest",
             "icon": "marketing-analytics/campaigns"
+          }
+        ]
+      },
+      {
+        "title": "All Sources",
+        "key": "all_sources",
+        "disabled": true,
+        "items": [
+          {
+            "title": "Campaigns",
+            "path": "all_sources-campaigns",
+            "icon": "marketing-analytics/source-all"
           }
         ]
       }
