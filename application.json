@@ -283,22 +283,22 @@
     "sections": [
       {
         "title": "Google Ads",
-        "key": "search",
+        "key": "google-ads",
         "disabled": false,
         "items": [
           {
             "title": "Overview",
-            "path": "search-overview",
+            "path": "google-ads-overview",
             "icon": "marketing-analytics/source-google-ads"
           },
           {
             "title": "Campaigns",
-            "path": "search-campaigns",
+            "path": "google-ads-campaigns",
             "icon": "marketing-analytics/campaigns"
           },
           {
             "title": "Optimizations",
-            "path": "search-optimizations",
+            "path": "google-ads-optimizations",
             "icon": "marketing-analytics/optimizations",
             "description": "Take immediate action to optimize your marketing spend and improve results. These opportunity reports show you what to stop doing and what to do more of."
           }
@@ -306,22 +306,22 @@
       },
       {
         "title": "Facebook Ads",
-        "key": "social",
+        "key": "facebook-ads",
         "disabled": true,
         "items": [
           {
             "title": "Overview",
-            "path": "social-overview",
+            "path": "facebook-ads-overview",
             "icon": "marketing-analytics/source-facebook"
           },
           {
             "title": "Campaigns",
-            "path": "social-fb_campaigns",
+            "path": "facebook-ads-campaigns",
             "icon": "marketing-analytics/campaigns"
           },
           {
             "title": "Optimizations",
-            "path": "social-fb_optimizations",
+            "path": "facebook-ads-optimizations",
             "icon": "marketing-analytics/optimizations",
             "description": "Take immediate action to optimize your marketing spend and improve results. These opportunity reports show you what to stop doing and what to do more of."
           }
@@ -443,7 +443,7 @@
       }
     },
     {
-      "path": "search-overview",
+      "path": "google-ads-overview",
       "title": "Overview",
       "type": "dashboardCollection",
       "filters": [
@@ -486,7 +486,7 @@
       }
     },
     {
-      "path": "search-campaigns",
+      "path": "google-ads-campaigns",
       "title": "Campaigns",
       "type": "dashboardCollection",
       "filters": [
@@ -628,7 +628,7 @@
       }
     },
     {
-      "path": "search-optimizations",
+      "path": "google-ads-optimizations",
       "title": "Optimizations",
       "type": "navigation",
       "navigation": {
@@ -640,19 +640,19 @@
             "items": [
               {
                 "description": "Increase the bid on these Ads to drive more conversions.",
-                "path": "search-optimizations-opportunities_ads",
+                "path": "google-ads-optimizations-opportunities_ads",
                 "singleValueReference": "opportunities_ads",
                 "title": "Ad Opportunities"
               },
               {
                 "description": "Increase the bid on these Keywords to drive more conversions.",
-                "path": "search-optimizations-opportunities_keywords",
+                "path": "google-ads-optimizations-opportunities_keywords",
                 "singleValueReference": "opportunities_keywords",
                 "title": "Keyword Opportunities"
               },
               {
                 "description": "Increase the bid on these Ad Groups to drive more conversions.",
-                "path": "search-optimizations-opportunities_ad_groups",
+                "path": "google-ads-optimizations-opportunities_ad_groups",
                 "singleValueReference": "opportunities_ad_groups",
                 "title": "Ad Group Opportunities"
               }
@@ -665,19 +665,19 @@
             "items": [
               {
                 "description": "Ads that have had recent big performance changes.",
-                "path": "search-optimizations-big_movers_ads",
+                "path": "google-ads-optimizations-big_movers_ads",
                 "singleValueReference": "big_movers_ads",
                 "title": "Ad Performance Changes"
               },
               {
                 "description": "Keywords that have had recent big performance changes.",
-                "path": "search-optimizations-big_movers_keywords",
+                "path": "google-ads-optimizations-big_movers_keywords",
                 "singleValueReference": "big_movers_keywords",
                 "title": "Keyword Performance Changes"
               },
               {
                 "description": "Ad Groups that have had recent big performance changes.",
-                "path": "search-optimizations-big_movers_ad_groups",
+                "path": "google-ads-optimizations-big_movers_ad_groups",
                 "singleValueReference": "big_movers_ad_groups",
                 "title": "Ad Group Performance Changes"
               }
@@ -690,19 +690,19 @@
             "items": [
               {
                 "description": "Quickly find the ads that need to be paused or have their bid lowered.",
-                "path": "search-optimizations-underperforming_ads",
+                "path": "google-ads-optimizations-underperforming_ads",
                 "singleValueReference": "underperforming_ads",
                 "title": "Underperforming Ads"
               },
               {
                 "description": "Quickly find the keywords that need to be paused or have their bid lowered.",
-                "path": "search-optimizations-underperforming_keywords",
+                "path": "google-ads-optimizations-underperforming_keywords",
                 "singleValueReference": "underperforming_keywords",
                 "title": "Underperforming Keywords"
               },
               {
                 "description": "Quickly find the ad groups that need to be paused or have their bid lowered.",
-                "path": "search-optimizations-underperforming_ad_groups",
+                "path": "google-ads-optimizations-underperforming_ad_groups",
                 "singleValueReference": "underperforming_ad_groups",
                 "title": "Underperforming Ad Groups"
               }
@@ -715,12 +715,12 @@
             "items": [
               {
                 "description": "Pause or lower the bid of these ads. They are performing much lower than your other ads.",
-                "path": "search-optimizations-alerts_ads",
+                "path": "google-ads-optimizations-alerts_ads",
                 "title": "Ad Alerts"
               },
               {
                 "description": "Pause or lower the bid of these keywords. They are performing much lower than your other keywords.",
-                "path": "search-optimizations-alerts_keywords",
+                "path": "google-ads-optimizations-alerts_keywords",
                 "title": "Keyword Alerts"
               }
             ]
@@ -812,7 +812,7 @@
       ]
     },
     {
-      "path": "search-optimizations-opportunities_ads",
+      "path": "google-ads-optimizations-opportunities_ads",
       "title": "Ad Opportunities",
       "type": "lookCollection",
       "description": "Increase the bid on these Ads to drive more conversions.",
@@ -873,7 +873,7 @@
       }
     },
     {
-      "path": "search-optimizations-opportunities_keywords",
+      "path": "google-ads-optimizations-opportunities_keywords",
       "title": "Keyword Opportunities",
       "type": "lookCollection",
       "description": "Increase the bid on these Keywords to drive more conversions.",
@@ -934,7 +934,7 @@
       }
     },
     {
-      "path": "search-optimizations-opportunities_ad_groups",
+      "path": "google-ads-optimizations-opportunities_ad_groups",
       "title": "Ad Group Opportunities",
       "type": "lookCollection",
       "description": "Increase the bid on these Ad Groups to drive more conversions.",
@@ -995,7 +995,7 @@
       }
     },
     {
-      "path": "search-optimizations-big_movers_ads",
+      "path": "google-ads-optimizations-big_movers_ads",
       "title": "Ad Performance Changes",
       "type": "lookCollection",
       "description": "Ads that have had recent big performance changes.",
@@ -1056,7 +1056,7 @@
       }
     },
     {
-      "path": "search-optimizations-big_movers_keywords",
+      "path": "google-ads-optimizations-big_movers_keywords",
       "title": "Keyword Performance Changes",
       "type": "lookCollection",
       "description": "Keywords that have had recent big performance changes.",
@@ -1117,7 +1117,7 @@
       }
     },
     {
-      "path": "search-optimizations-big_movers_ad_groups",
+      "path": "google-ads-optimizations-big_movers_ad_groups",
       "title": "Ad Group Performance Changes",
       "type": "lookCollection",
       "description": "Ad Groups that have had recent big performance changes.",
@@ -1178,7 +1178,7 @@
       }
     },
     {
-      "path": "search-optimizations-underperforming_ads",
+      "path": "google-ads-optimizations-underperforming_ads",
       "title": "Underperforming Ads",
       "type": "lookCollection",
       "description": "Quickly find the ads that need to be paused or have their bid lowered.",
@@ -1239,7 +1239,7 @@
       }
     },
     {
-      "path": "search-optimizations-underperforming_keywords",
+      "path": "google-ads-optimizations-underperforming_keywords",
       "title": "Underperforming Keywords",
       "type": "lookCollection",
       "description": "Quickly find the keywords that need to be paused or have their bid lowered.",
@@ -1300,7 +1300,7 @@
       }
     },
     {
-      "path": "search-optimizations-underperforming_ad_groups",
+      "path": "google-ads-optimizations-underperforming_ad_groups",
       "title": "Underperforming Ad Groups",
       "type": "lookCollection",
       "description": "Quickly find the ad groups that need to be paused or have their bid lowered.",
@@ -1361,7 +1361,7 @@
       }
     },
     {
-      "path": "search-optimizations-alerts_ads",
+      "path": "google-ads-optimizations-alerts_ads",
       "title": "Ad Alerts",
       "type": "lookCollection",
       "description": "Pause or lower the bid of these ads. They are performing much lower than your other ads.",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "path": "search-optimizations-alerts_keywords",
+      "path": "google-ads-optimizations-alerts_keywords",
       "title": "Keyword Alerts",
       "type": "lookCollection",
       "description": "Pause or lower the bid of these keywords. They are performing much lower than your other keywords.",
@@ -1447,7 +1447,7 @@
       }
     },
     {
-      "path": "social-overview",
+      "path": "facebook-ads-overview",
       "title": "Overview",
       "type": "dashboardCollection",
       "filters": [
@@ -1488,7 +1488,7 @@
       }
     },
     {
-      "path": "social-fb_campaigns",
+      "path": "facebook-ads-campaigns",
       "title": "Campaigns",
       "type": "dashboardCollection",
       "filters": [
@@ -1620,7 +1620,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations",
+      "path": "facebook-ads-optimizations",
       "title": "Optimizations",
       "type": "navigation",
       "navigation": {
@@ -1632,13 +1632,13 @@
             "items": [
               {
                 "description": "Increase the bid on these Ads to drive more conversions.",
-                "path": "social-fb_optimizations-fb_opportunities_ads",
+                "path": "facebook-ads-optimizations-fb_opportunities_ads",
                 "singleValueReference": "fb_opportunities_ads",
                 "title": "Ad Opportunities"
               },
               {
                 "description": "Increase the bid on these Ad Sets to drive more conversions.",
-                "path": "social-fb_optimizations-fb_opportunities_asets",
+                "path": "facebook-ads-optimizations-fb_opportunities_asets",
                 "singleValueReference": "fb_opportunities_adsets",
                 "title": "Ad Set Opportunities"
               }
@@ -1651,13 +1651,13 @@
             "items": [
               {
                 "description": "Ads that have had recent big performance changes.",
-                "path": "social-fb_optimizations-fb_big_movers_ads",
+                "path": "facebook-ads-optimizations-fb_big_movers_ads",
                 "singleValueReference": "fb_big_movers_ads",
                 "title": "Ad Performance Changes"
               },
               {
                 "description": "Ad Sets that have had recent big performance changes.",
-                "path": "social-fb_optimizations-fb_big_movers_adsets",
+                "path": "facebook-ads-optimizations-fb_big_movers_adsets",
                 "singleValueReference": "fb_big_movers_adsets",
                 "title": "Ad Set Performance Changes"
               }
@@ -1670,13 +1670,13 @@
             "items": [
               {
                 "description": "Quickly find the ads that need to be paused or have their bid lowered.",
-                "path": "social-fb_optimizations-fb_underperforming_ads",
+                "path": "facebook-ads-optimizations-fb_underperforming_ads",
                 "singleValueReference": "fb_underperforming_ads",
                 "title": "Underperforming Ads"
               },
               {
                 "description": "Quickly find the ad sets that need to be paused or have their bid lowered.",
-                "path": "social-fb_optimizations-underperforming_adsets",
+                "path": "facebook-ads-optimizations-underperforming_adsets",
                 "singleValueReference": "fb_underperforming_adsets",
                 "title": "Underperforming Ad Sets"
               }
@@ -1689,12 +1689,12 @@
             "items": [
               {
                 "description": "Pause or lower the bid of these ads. They are performing much lower than your other ads.",
-                "path": "social-fb_optimizations-fb_alerts_ads",
+                "path": "facebook-ads-optimizations-fb_alerts_ads",
                 "title": "Ad Alerts"
               },
               {
                 "description": "Pause or lower the bid of these adsets. They are performing much lower than your other adsets.",
-                "path": "social-fb_optimizations-fb_alerts_adsets",
+                "path": "facebook-ads-optimizations-fb_alerts_adsets",
                 "title": "Adset Alerts"
               }
             ]
@@ -1768,7 +1768,7 @@
       ]
     },
     {
-      "path": "social-fb_optimizations-fb_opportunities_ads",
+      "path": "facebook-ads-optimizations-fb_opportunities_ads",
       "title": "Ad Opportunities",
       "type": "lookCollection",
       "description": "Increase the bid on these Ads to drive more conversions.",
@@ -1822,7 +1822,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-fb_opportunities_asets",
+      "path": "facebook-ads-optimizations-fb_opportunities_asets",
       "title": "Ad Set Opportunities",
       "type": "lookCollection",
       "description": "Increase the bid on these Ad Sets to drive more conversions.",
@@ -1876,7 +1876,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-fb_big_movers_ads",
+      "path": "facebook-ads-optimizations-fb_big_movers_ads",
       "title": "Ad Performance Changes",
       "type": "lookCollection",
       "description": "Ads that have had recent big performance changes.",
@@ -1930,7 +1930,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-fb_big_movers_adsets",
+      "path": "facebook-ads-optimizations-fb_big_movers_adsets",
       "title": "Ad Set Performance Changes",
       "type": "lookCollection",
       "description": "Ad Sets that have had recent big performance changes.",
@@ -1984,7 +1984,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-fb_underperforming_ads",
+      "path": "facebook-ads-optimizations-fb_underperforming_ads",
       "title": "Underperforming Ads",
       "type": "lookCollection",
       "description": "Quickly find the ads that need to be paused or have their bid lowered.",
@@ -2038,7 +2038,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-underperforming_adsets",
+      "path": "facebook-ads-optimizations-underperforming_adsets",
       "title": "Underperforming Ad Sets",
       "type": "lookCollection",
       "description": "Quickly find the ad sets that need to be paused or have their bid lowered.",
@@ -2092,7 +2092,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-fb_alerts_ads",
+      "path": "facebook-ads-optimizations-fb_alerts_ads",
       "title": "Ad Alerts",
       "type": "lookCollection",
       "description": "Pause or lower the bid of these ads. They are performing much lower than your other ads.",
@@ -2134,7 +2134,7 @@
       }
     },
     {
-      "path": "social-fb_optimizations-fb_alerts_adsets",
+      "path": "facebook-ads-optimizations-fb_alerts_adsets",
       "title": "Adset Alerts",
       "type": "lookCollection",
       "description": "Pause or lower the bid of these adsets. They are performing much lower than your other adsets.",
