@@ -2247,7 +2247,7 @@
       "singleValuesSources": [
         {
           "model": "marketing_analytics",
-          "view": "li_campaign_stats",
+          "view": "linkedin_ad_date_fact",
           "params": "&sorts=fact.date_period+desc&fields=fact.date_period,fact.date_end_of_period&f[fact.date_period_before_latest]=Yes&f[fact.date_period_comparison_period]=Yes",
           "fields": {
             "spend": {
