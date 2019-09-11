@@ -580,19 +580,22 @@
             "lookmlID": "marketing_analytics::campaign_metrics_conversions",
             "name": "Conversions",
             "permalink": "conversions",
-            "singleValueReference": "conversions"
+            "singleValueReference": "conversions",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::campaign_metrics_cost_per_conversion",
             "name": "Cost Per Conversion",
             "permalink": "cost_per_conversion",
-            "singleValueReference": "cost_per_conversion"
+            "singleValueReference": "cost_per_conversion",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::campaign_metrics_conversion_rate",
             "name": "Conversion Rate",
             "permalink": "conversion_rate",
-            "singleValueReference": "conversion_rate"
+            "singleValueReference": "conversion_rate",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::campaign_metrics_cost_per_click",
@@ -1572,19 +1575,22 @@
             "lookmlID": "marketing_analytics::fb_campaign_metrics_conversions",
             "name": "Conversions",
             "permalink": "conversions",
-            "singleValueReference": "conversions"
+            "singleValueReference": "conversions",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::fb_campaign_metrics_cpa",
             "name": "Cost Per Conversion",
             "permalink": "cost_per_conversion",
-            "singleValueReference": "cost_per_conversion"
+            "singleValueReference": "cost_per_conversion",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::fb_campaign_metrics_conversion_rate",
             "name": "Conversion Rate",
             "permalink": "conversion_rate",
-            "singleValueReference": "conversion_rate"
+            "singleValueReference": "conversion_rate",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::fb_campaign_metrics_cost_per_click",
@@ -2296,19 +2302,22 @@
             "lookmlID": "marketing_analytics::li_campaign_metrics_conversions",
             "name": "Conversions",
             "permalink": "conversions",
-            "singleValueReference": "conversions"
+            "singleValueReference": "conversions",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::li_campaign_metrics_cost_per_conversion",
             "name": "Cost Per Conversion",
             "permalink": "cost_per_conversion",
-            "singleValueReference": "cost_per_conversion"
+            "singleValueReference": "cost_per_conversion",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::li_campaign_metrics_conversion_rate",
             "name": "Conversion Rate",
             "permalink": "conversion_rate",
-            "singleValueReference": "conversion_rate"
+            "singleValueReference": "conversion_rate",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::li_campaign_metrics_cost_per_click",
@@ -2499,19 +2508,22 @@
             "lookmlID": "marketing_analytics::bing_campaign_metrics_conversions",
             "name": "Conversions",
             "permalink": "conversions",
-            "singleValueReference": "conversions"
+            "singleValueReference": "conversions",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::bing_campaign_metrics_cost_per_conversion",
             "name": "Cost Per Conversion",
             "permalink": "cost_per_conversion",
-            "singleValueReference": "cost_per_conversion"
+            "singleValueReference": "cost_per_conversion",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::bing_campaign_metrics_conversion_rate",
             "name": "Conversion Rate",
             "permalink": "conversion_rate",
-            "singleValueReference": "conversion_rate"
+            "singleValueReference": "conversion_rate",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::bing_campaign_metrics_cost_per_click",
@@ -3541,19 +3553,22 @@
             "lookmlID": "marketing_analytics::cross_channel_conversions",
             "name": "Conversions",
             "permalink": "conversions",
-            "singleValueReference": "conversions"
+            "singleValueReference": "conversions",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::cross_channel_cost_per_conversion",
             "name": "Cost Per Conversion",
             "permalink": "cost_per_conversion",
-            "singleValueReference": "cost_per_conversion"
+            "singleValueReference": "cost_per_conversion",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::cross_channel_conversion_rate",
             "name": "Conversion Rate",
             "permalink": "conversion_rate",
-            "singleValueReference": "conversion_rate"
+            "singleValueReference": "conversion_rate",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::cross_channel_cost_per_click",
@@ -3724,19 +3739,22 @@
             "lookmlID": "marketing_analytics::pi_campaign_metrics_conversions",
             "name": "Conversions",
             "permalink": "conversions",
-            "singleValueReference": "conversions"
+            "singleValueReference": "conversions",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::pi_campaign_metrics_cost_per_conversion",
             "name": "Cost Per Conversion",
             "permalink": "cost_per_conversion",
-            "singleValueReference": "cost_per_conversion"
+            "singleValueReference": "cost_per_conversion",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::pi_campaign_metrics_conversion_rate",
             "name": "Conversion Rate",
             "permalink": "conversion_rate",
-            "singleValueReference": "conversion_rate"
+            "singleValueReference": "conversion_rate",
+            "zeroHide": true
           },
           {
             "lookmlID": "marketing_analytics::pi_campaign_metrics_cost_per_click",
